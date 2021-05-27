@@ -1,43 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/AC-Mono.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Primary Meta Tags -->
+<title>Mr. & Mrs. Michel</title>
+<meta name="title" content="Mr. & Mrs. Michel">
+<meta name="description" content="Annette & Carlos Wedding">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.themichelswedding.com">
+<meta property="og:title" content="Mr. & Mrs. Michel">
+<meta property="og:description" content="Annette & Carlos Wedding">
+<meta property="og:image" content="../src/assets/images/image3.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.themichelswedding.com">
+<meta property="twitter:title" content="Mr. & Mrs. Michel">
+<meta property="twitter:description" content="Annette & Carlos Wedding">
+<meta property="twitter:image" content="../src/assets/images/image3.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pinyon+Script&display=swap"
+    rel="stylesheet">
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/AC-Mono.jpg" />
+  <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+  </script>
+  <script>
+    (function ($) {
+      "use strict";
+
+      $(function () {
+        var header = $(".start-style");
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+
+          if (scroll >= 10) {
+            header.removeClass('start-style').addClass("scroll-on");
+          } else {
+            header.removeClass("scroll-on").addClass('start-style');
+          }
+        });
+      });
+
+      //Animation
+
+      $(document).ready(function () {
+        $('body.hero-anime').removeClass('hero-anime');
+      });
+
+      //Menu On Hover
+
+      $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
+        if ($(window).width() > 750) {
+          var _d = $(e.target).closest('.nav-item');
+          _d.addClass('show');
+          setTimeout(function () {
+            _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
+          }, 1);
+        }
+      });
+
+
+
+    })(jQuery);
+  </script>
+</head>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
+
+        You can add webfonts, meta tags, or analytics to this file.
+        The build step will place the bundled scripts into the <body> tag.
+
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+</body>
+<script>
+  (function ($) {
+    $.fn.countdown = function (options, callback) {
+      //custom 'this' selector
+      thisEl = $(this);
+
+      // array of custom settings
+      var settings = {
+        date: null,
+        format: null
+      };
+
+      // append the settings array to options
+      if (options) {
+        $.extend(settings, options);
+      }
+
+      //create the countdown processing function
+      function countdown_proc() {
+        var eventDate = Date.parse(settings.date) / 1000;
+        var currentDate = Math.floor($.now() / 1000);
+
+        if (eventDate <= currentDate) {
+          callback.call(this);
+          clearInterval(interval);
+        }
+
+        var seconds = eventDate - currentDate;
+
+        var days = Math.floor(seconds / (60 * 60 * 24));
+        //calculate the number of days
+
+        seconds -= days * 60 * 60 * 24;
+        //update the seconds variable with number of days removed
+
+        var hours = Math.floor(seconds / (60 * 60));
+        seconds -= hours * 60 * 60;
+        //update the seconds variable with number of hours removed
+
+        var minutes = Math.floor(seconds / 60);
+        seconds -= minutes * 60;
+        //update the seconds variable with number of minutes removed
+
+        //conditional statements
+        if (days == 1) {
+          thisEl.find(".timeRefDays").text("day");
+        } else {
+          thisEl.find(".timeRefDays").text("days");
+        }
+        if (hours == 1) {
+          thisEl.find(".timeRefHours").text("hour");
+        } else {
+          thisEl.find(".timeRefHours").text("hours");
+        }
+        if (minutes == 1) {
+          thisEl.find(".timeRefMinutes").text("minute");
+        } else {
+          thisEl.find(".timeRefMinutes").text("minutes");
+        }
+        if (seconds == 1) {
+          thisEl.find(".timeRefSeconds").text("second");
+        } else {
+          thisEl.find(".timeRefSeconds").text("seconds");
+        }
+
+        //logic for the two_digits ON setting
+        if (settings.format == "on") {
+          days = String(days).length >= 2 ? days : "0" + days;
+          hours = String(hours).length >= 2 ? hours : "0" + hours;
+          minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
+          seconds = String(seconds).length >= 2 ? seconds : "0" + seconds;
+        }
+
+        //update the countdown's html values.
+        thisEl.find(".days").text(days);
+        thisEl.find(".hours").text(hours);
+        thisEl.find(".minutes").text(minutes);
+        thisEl.find(".seconds").text(seconds);
+      }
+
+      //run the function
+      countdown_proc();
+
+      //loop the function
+      interval = setInterval(countdown_proc, 1000);
+    };
+  })(jQuery);
+
+  //Provide the plugin settings
+  $("#countdown").countdown({
+      //The countdown end date
+      date: "7 August 2021 12:00:00",
+
+      // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+      format: "on"
+    },
+
+    function () {
+      // This will run when the countdown ends
+      alert("Its Wedding Time!");
+    }
+  );
+
+  function setHeights() {
+    var windowHeight = $(window).height();
+    $(".slide").height(windowHeight);
+  }
+
+  setHeights();
+
+  $(window).resize(function () {
+    setHeights();
+  });
+
+  function addSticky() {
+    $(".slide").each(function () {
+      var scrollerAnchor = $(this).offset().top;
+      if (window.scrollY >= scrollerAnchor) {
+        $(this).addClass("fix-it");
+      } else {
+        $(this).removeClass("fix-it");
+      }
+    });
+  }
+
+  $(window).scroll(function () {
+    addSticky();
+  });
+</script>
+<script>
+  var navTrigger = document.getElementsByClassName('nav-trigger')[0];
+
+  var body = document.getElementsByTagName('body')[0];
+
+  navTrigger.addEventListener('click', toggleNavigation);
+
+  function toggleNavigation(event) {
+    event.preventDefault();
+    body.classList.toggle('nav-open');
+  }
+</script>
+<script>
+  $(function(){
+    $('.carousel').carousel({
+      interval: 5000,
+      wrap: true
+    });
+});
+</script>
 </html>
