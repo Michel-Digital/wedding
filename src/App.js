@@ -22,10 +22,9 @@ const App = () => {
     <>
      <Menu/>
      <Router>
-     <Redirect from="/" to="/" />
-     <Redirect from="/home" to="/" />
+     <Redirect from="/" to="/home" />
      <NotFound default />
-       <Hero path="/" />
+       <Hero path="/home" />
        <Rsvp path="/rsvp"/>
        <Itinerary path="/itinerary"/> 
        <Thanks path="/thanks"/>
