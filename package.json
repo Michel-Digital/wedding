@@ -1,5 +1,5 @@
 {
-  "homepage": "http://michel-digital.github.io/acwedding",
+  "homepage": "https://themichelswedding.com",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -52,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "npm": "7.12.1",
+    "node": "15.14.0"
   }
 }

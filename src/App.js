@@ -14,23 +14,24 @@ import Rsvp from './assets/components/rsvp'
 import Thanks from './assets/components/thanks'
 import NoThanks from './assets/components/thankyou'
 import Itinerary from './assets/components/itinerary'
+import ErrorPage from './assets/components/404'
 
 const App = () => {
-
+  const NotFound =() =><ErrorPage path="/404" />
   return (
-    <div>
+    <>
      <Menu/>
      <Router>
-     <Redirect from="/acwedding" to="/" />
+     <Redirect from="/" to="/" />
      <Redirect from="/home" to="/" />
+     <NotFound default />
        <Hero path="/" />
        <Rsvp path="/rsvp"/>
        <Itinerary path="/itinerary"/> 
        <Thanks path="/thanks"/>
        <NoThanks path="/thankyou"/>
      </Router>
-
-    </div>
+    </>
   );
 }
 
