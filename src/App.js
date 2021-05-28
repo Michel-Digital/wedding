@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
      <Menu/>
-      <Hero exact path="/" />
+      <Hero exact path="/*" />
       <Itinerary /> 
        <Rsvp />
      <Router>
