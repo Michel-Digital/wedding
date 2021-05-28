@@ -17,18 +17,18 @@ import Itinerary from './assets/components/itinerary'
 import ErrorPage from './assets/components/404'
 
 const App = () => {
-  const NotFound =() =><ErrorPage path="./404" />
+  const NotFound =() =><ErrorPage path="/404" />
   return (
     <>
      <Menu/>
      <Router>
-     <Redirect from="./" to="./home" />
+     <Redirect from="/home" to="/" />
      <NotFound default />
-       <Hero path="./home" />
-       <Rsvp path="./rsvp"/>
-       <Itinerary path="./itinerary"/> 
-       <Thanks path="./thanks"/>
-       <NoThanks path="./thankyou"/>
+       <Hero exact path="/" />
+       <Rsvp path="rsvp"/>
+       <Itinerary path="itinerary"/> 
+       <Thanks path="thanks"/>
+       <NoThanks path="thankyou"/>
      </Router>
     </>
   );
