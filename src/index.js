@@ -70,10 +70,12 @@ $('#submit-form').on('click', function(e) {
           // data.redirect contains the string URL to redirect to
           
           if($form[0][3].checked===true){
-            window.location.href = "/thanks";
+            $('.front-form').addClass('hidden');
+            $('.back-form-yes').toggleClass('hidden');
             console.log('yes');
           }else{
-            window.location.href = "/thankyou";
+            $('.front-form').addClass('.hidden');
+            $('.back-form-no').toggleClass('.hidden');
             console.log('no');
           }
       } else {

@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-free";
 
 const NoThanks = () => {
   return (
-    <section className="form d-flex justify-content-center align-items-center">
+    <section id="Rsvp" className="form d-flex justify-content-center align-items-center hidden back-form-no">
       <div className="rsvp-container d-flex justify-content-center align-items-center">
         <div className="rsvp-inner-container text-center">
           <h1 className="text-center">R<span style={{color:"#CCD5AE"}}>.</span>s<span style={{color:"#CCD5AE"}}>.</span>v<span style={{color:"#CCD5AE"}}>.</span>p</h1>

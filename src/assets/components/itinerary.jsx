@@ -1,8 +1,40 @@
 import React from "react";
 import "../css/itinerary.css";
 import "../css/responsive.css"
+import $ from 'jquery'
 
 const Itinerary = () => {
+  $('.carousel-item').eq(0).addClass('active');
+  var total = document.getElementsByClassName('.carousel-item').length;
+  var current = 0;
+
+  const moveRight = () => {
+    var next = current;
+    current = current+1;
+    setSlide(next,current);
+  }
+  const moveLeft = () => {
+    var next=current;
+    current = current -1;
+    setSlide(next,current);
+  }
+  const setSlide = (prev,next) => {
+    var slide = current;
+    if(next > total - 1){
+      slide = 0;
+      current = 0;
+    }
+    if( next < 0 ){
+      slide = total - 1;
+      current = total - 1;
+    }
+            $('.carousel-item').eq(prev).removeClass('active');
+            $('.carousel-item').eq(slide).addClass('active');
+            setTimeout(function(){
+
+            },800);
+  } 
+  
   return (
     <section id="timeline" className="timeline-section">
         <div>
@@ -12,12 +44,12 @@ const Itinerary = () => {
 <div className="carousel shadow-6"  data-interval="3000" data-ride="carousel">
   <div className="logo_div"></div>
   <div className="carousel__nav">
-   <span id="moveLeft" className="carousel__arrow">
+   <span id="moveLeft" className="carousel__arrow" onClick={moveLeft()}>
         <svg className="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
     <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11p0Z"></path>
 </svg>
     </span>
-    <span id="moveRight" className="carousel__arrow" >
+    <span id="moveRight" className="carousel__arrow" onClick={moveRight()}>
       <svg className="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
   <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
 </svg>    

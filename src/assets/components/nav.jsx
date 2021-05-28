@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from '@reach/router';
 import "../css/nav.css";
 import navImage from "../images/ac.png";
 
 const Menu = () => {
+  const toggleNavigation= () => {
+    document.getElementsByTagName('body')[0].classList.remove('nav-open');
+  }
   return (
     <div>
       <a href="#navigation" className="nav-trigger">
@@ -17,10 +19,10 @@ const Menu = () => {
 
         <ul className="nav">
           <li>
-            <Link to="/home" className="navi-item">Home</Link>
+            <a href="#heroID" className="navi-item" onClick={toggleNavigation}>Home</a>
           </li>
           <li>
-            <Link to="/itinerary" className="navi-item">Itinerary</Link>
+            <a href="#timeline" className="navi-item" onClick={toggleNavigation}>Itinerary</a>
           </li>
           {/* <li>
             <Link to="/" className="navi-item">Locations</Link>
@@ -29,13 +31,13 @@ const Menu = () => {
             <Link to="/" className="navi-item">Accommodations</Link>
           </li> */}
           <li>
-            <Link to="/" className="navi-item">Registry</Link>
+            <a href="/" className="navi-item" onClick={toggleNavigation}>Registry</a>
           </li>
           <li>
-            <Link to="/rsvp" className="navi-item">R.S.V.P</Link>
+            <a href="#Rsvp" className="navi-item" onClick={toggleNavigation}>R.S.V.P</a>
           </li>
           <li>
-            <Link to="/" className="navi-item">FAQs</Link>
+            <a href="/faqs#faqs" className="navi-item" onClick={toggleNavigation}>FAQs</a>
           </li>
         </ul>
       </nav>

@@ -51,3 +51,6 @@ h4,h5,h6{
 p,a,i,b,label,span{
   font-family: 'Montserrat', sans-serif;
 }
+h1.title span{
+  font-family: 'Pinyon Script', cursive;
+}

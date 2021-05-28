@@ -4,10 +4,14 @@ import "@fortawesome/fontawesome-free";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import Thanks from './thanks'
+import NoThanks from './thankyou'
+
 const Rsvp = () => {
   return (
-    <section className="form d-flex justify-content-center align-items-center">
-      <div className="rsvp-container d-flex justify-content-center align-items-center">
+    <>
+    <section id="Rsvp" className="form d-flex justify-content-center align-items-center front-form">
+      <div className="rsvp-container d-flex justify-content-center align-items-center ">
         <div className="rsvp-inner-container ">
           <h1 className="text-center">R<span style={{color:"#CCD5AE"}}>.</span>s<span style={{color:"#CCD5AE"}}>.</span>v<span style={{color:"#CCD5AE"}}>.</span>p</h1>
           <p className="mt-5">Kindly reply by June 4th, 2021</p>
@@ -37,6 +41,9 @@ const Rsvp = () => {
         </div>
       </div>
     </section>
+    <Thanks />
+    <NoThanks />
+    </>
   );
 };
 export default Rsvp;

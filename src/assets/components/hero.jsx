@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from '@reach/router';
 import '../css/hero.css'
 import Countdown from "./countdown"
 
@@ -20,7 +19,7 @@ const Hero = () => {
       </div>
       <i className="coords">N 38° 53′ 22″ 38.8895°  //  W 77° 2′ 7″ 77.0353°</i>
       <div className="heroBtn-div">
-      <Link to="/rsvp"><span className="btn">RSVP</span></Link>
+      <a href="#Rsvp"><span className="btn">RSVP</span></a>
       </div>
     </section>
   );

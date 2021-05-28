@@ -183,3 +183,6 @@ fieldset {
 .diet {
   width: 75% !important;
 }
+.hidden{
+  display: none !important;
+}
